@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro"
+---
+
+<Layout title="Welcome to WAMO.">
+  <img src="/wamo-bg.png" class="absolute inset-0 -z-10" />
+  <header class="p-10 flex items-start justify-between">
+    <img src="/logo.svg" class="w-32" />
+
+    <div class="flex justify-between items-start gap-12">
+      <div class="flex gap-8 items-start">
+        <a
+          href="/"
+          class="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors"
+        >
+          瓦猫工程
+        </a>
+
+        <a
+          href="/"
+          class="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors"
+        >
+          瓦猫托邦
+        </a>
+
+        <a
+          href="/"
+          class="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors"
+        >
+          城市指南
+        </a>
+
+        <a
+          href="/"
+          class="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors"
+        >
+          加入
+        </a>
+      </div>
+
+      <div class="flex gap-5">
+        <a href="" target="_blank"><img src="/x-logo.svg" class="w-5" /></a>
+        <a href="" target="_blank"
+          ><img src="/telegram-logo.svg" class="w-5" /></a
+        >
+      </div>
+    </div>
+  </header>
+
+  <main class="">
+	<div class="container mx-auto flex flex-col items-center py-4 xl:py-48">
+		<h1 class="text-[#5270F9] text-[110px] font-bold">WAMOTOPIA</h1>
+		<h2 class="text-[#5270F9] text-[75px] font-bold">2023.12.16 ~ 2024.01.01</h2>
+
+		<div class="flex gap-4 mt-8">
+			<button class="w-60 rounded-md bg-[#FF856A] text-white text-2xl py-2 transition-colors hover:opacity-80">深入了解</button>
+			<button class="w-60 rounded-md bg-[#375EFF] text-white text-2xl py-2 transition-colors hover:opacity-80">我想加入</button>
+			<!-- <button>我想加入</button> -->
+		</div>
+	</div>
+  </main>
+
+  <!-- Placeholder -->
+  <footer />
+</Layout>
