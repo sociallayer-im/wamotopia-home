@@ -156,7 +156,7 @@ export function FixedHeader() {
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  // href={siteConfig.applyToJoinForm}
+                  href={siteConfig.applyToJoinForm}
                   className="uppercase block py-5 font-medium border-b border-white hover:opacity-80"
                 >
                   {t("nav.join")}
