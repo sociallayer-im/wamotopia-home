@@ -1,41 +1,53 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-import { FixedHeader } from "@/components/FixedHeader"
+import { FixedHeader } from "@/components/fixed-header"
+import { getLangFromUrl, useTranslatedPath, useTranslations } from "@/i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
 ---
 
 <Layout title="Welcome to WAMO.">
   <FixedHeader client:only="react" />
 
   <main class="relative">
-    <section class="h-[80vh]">
-      <img src="/wamo-bg.png" class="absolute inset-0 -z-10" />
+    <section class="2xl:min-h-[86vh]">
+      <img src="/wamo-bg.png" class="absolute inset-0 -z-10 min-h-[40vh]" />
 
-      <div class="container mx-auto flex flex-col items-center py-4 xl:py-48">
-        <h1 class="text-[#5270F9] text-[110px] font-bold">WAMOTOPIA</h1>
-        <h2 class="text-[#5270F9] text-[75px] font-bold">
+      <div
+        class="container mx-auto flex flex-col items-center py-32 lg:py-28 xl:py-48 2xl:py-80 px-4"
+      >
+        <h1
+          class="text-[#5270F9] font-bold text-4xl md:text-6xl xl:text-[110px] leading-tight lg:leading-relaxed"
+        >
+          WAMOTOPIA
+        </h1>
+        <h2
+          class="text-[#5270F9] font-bold text-2xl md:text-3xl xl:text-[75px] leading-tight lg:leading-relaxed"
+        >
           2023.12.16 ~ 2024.01.01
         </h2>
 
-        <div class="flex gap-4 mt-8">
+        <div class="flex flex-col md:flex-row gap-4 mt-8 px-8">
           <button
-            class="w-60 rounded-md bg-[#FF856A] text-white text-2xl py-2 transition-opacity hover:opacity-90"
+            class="w-60 rounded-md bg-[#FF856A] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
             >Learn More</button
           >
           <button
-            class="w-60 rounded-md bg-[#375EFF] text-white text-2xl py-2 transition-opacity hover:opacity-90"
+            class="w-60 rounded-md bg-[#375EFF] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
             >Join</button
           >
-          <!-- <button>我想加入</button> -->
         </div>
       </div>
     </section>
 
-    <div class="bg-[#ced8ff] py-20 text-center">
+    <div class="bg-[#ced8ff] py-20 text-center px-12 sm:px-0 space-y-8">
       <h3 class="text-[#525E95] text-[22px]">
-        WAMOTOPIA 是在清迈举办的为期两周的文化交汇活动
+        {t("home.introduction")}
       </h3>
       <h3 class="text-[#525E95] text-[22px]">
-        融合了 Web3 社区和数字游民，旨在一起创新、协作，并共同塑造未来
+        {t("home.sub-introduction")}
       </h3>
     </div>
 
@@ -49,4 +61,3 @@ import { FixedHeader } from "@/components/FixedHeader"
   <!-- Placeholder -->
   <footer></footer>
 </Layout>
- ../../utils/ui
