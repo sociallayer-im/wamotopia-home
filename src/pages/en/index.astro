@@ -1,11 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import { FixedHeader } from "@/components/fixed-header"
-import { getLangFromUrl, useTranslatedPath, useTranslations } from "@/i18n/utils"
+import { getLangFromUrl, useTranslations } from "@/i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
-const translatePath = useTranslatedPath(lang)
 ---
 
 <Layout title="Welcome to WAMO.">
@@ -32,11 +31,11 @@ const translatePath = useTranslatedPath(lang)
         <div class="flex flex-col md:flex-row gap-4 mt-8 px-8">
           <button
             class="w-60 rounded-md bg-[#FF856A] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
-            >Learn More</button
+            >{t('hero.learn')}</button
           >
           <button
             class="w-60 rounded-md bg-[#375EFF] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
-            >Join</button
+            >{t('hero.join')}</button
           >
         </div>
       </div>

@@ -1,34 +1,62 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import { FixedHeader } from "../components/fixed-header"
+import Layout from "@/layouts/Layout.astro"
+import { FixedHeader } from "@/components/fixed-header"
+import { getLangFromUrl, useTranslations } from "@/i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <Layout title="Welcome to WAMO.">
-  <img src="/wamo-bg.png" class="absolute inset-0 -z-10" />
-  <FixedHeader />
+  <FixedHeader client:only="react" />
 
-  <main class="">
-    <div class="container mx-auto flex flex-col items-center py-4 xl:py-48">
-      <h1 class="text-[#5270F9] text-[110px] font-bold">WAMOTOPIA</h1>
-      <h2 class="text-[#5270F9] text-[75px] font-bold">
-        2023.12.16 ~ 2024.01.01
-      </h2>
+  <main class="relative">
+    <section class="2xl:min-h-[86vh]">
+      <img src="/wamo-bg.png" class="absolute inset-0 -z-10 min-h-[40vh]" />
 
-      <div class="flex gap-4 mt-8">
-        <button
-          class="w-60 rounded-md bg-[#FF856A] text-white text-2xl py-2 transition-opacity hover:opacity-90"
-          >深入了解</button
+      <div
+        class="container mx-auto flex flex-col items-center py-32 lg:py-28 xl:py-48 2xl:py-80 px-4"
+      >
+        <h1
+          class="text-[#5270F9] font-bold text-4xl md:text-6xl xl:text-[110px] leading-tight lg:leading-relaxed"
         >
-        <button
-          class="w-60 rounded-md bg-[#375EFF] text-white text-2xl py-2 transition-opacity hover:opacity-90"
-          >我想加入</button
+          WAMOTOPIA
+        </h1>
+        <h2
+          class="text-[#5270F9] font-bold text-2xl md:text-3xl xl:text-[75px] leading-tight lg:leading-relaxed"
         >
-        <!-- <button>我想加入</button> -->
+          2023.12.16 ~ 2024.01.01
+        </h2>
+
+        <div class="flex flex-col md:flex-row gap-4 mt-8 px-8">
+          <button
+            class="w-60 rounded-md bg-[#FF856A] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
+            >{t("hero.learn")}</button
+          >
+          <button
+            class="w-60 rounded-md bg-[#375EFF] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
+            >{t("hero.join")}</button
+          >
+        </div>
       </div>
+    </section>
+
+    <div class="bg-[#ced8ff] py-20 text-center px-12 sm:px-0 space-y-8">
+      <h3 class="text-[#525E95] text-[22px]">
+        {t("home.introduction")}
+      </h3>
+      <h3 class="text-[#525E95] text-[22px]">
+        {t("home.sub-introduction")}
+      </h3>
     </div>
+
+    <iframe
+      src="https://solar-activity.vercel.app/wamo/schedule"
+      frameborder="0"
+      width="100%"
+      class="h-screen"></iframe>
   </main>
 
   <!-- Placeholder -->
   <footer></footer>
 </Layout>
-../components/fixed-header
