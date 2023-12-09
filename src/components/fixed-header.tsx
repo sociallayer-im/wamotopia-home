@@ -6,6 +6,7 @@ import { Disclosure, Transition } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import { cn } from "../utils/ui"
+import { siteConfig } from "@/utils/config"
 
 const HEADER_THROTTLE = 120
 
@@ -53,28 +54,29 @@ export function FixedHeader() {
               <div className="flex gap-8 items-start">
                 <a
                   href="/"
-                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors"
+                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors py-2 px-4"
                 >
                   {t("nav.project")}
                 </a>
 
                 <a
                   href="/"
-                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors"
+                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors py-2 px-4"
                 >
                   {t("nav.wamotopia")}
                 </a>
 
                 <a
                   href="/"
-                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors"
+                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors py-2 px-4"
                 >
                   {t("nav.city-guide")}
                 </a>
 
                 <a
-                  href="/"
-                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors"
+                  href={siteConfig.applyToJoinForm}
+                  target="_blank"
+                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors py-2 px-4"
                 >
                   {t("nav.join")}
                 </a>
@@ -94,10 +96,10 @@ export function FixedHeader() {
               </a>
 
               <div className="flex gap-5">
-                <a href="" target="_blank">
+                <a href={siteConfig.twitter} target="_blank">
                   <img src="/x-logo.svg" className="w-5" />
                 </a>
-                <a href="" target="_blank">
+                <a href={siteConfig.telegram} target="_blank">
                   <img src="/telegram-logo.svg" className="w-5" />
                 </a>
               </div>
@@ -108,7 +110,7 @@ export function FixedHeader() {
               <Disclosure.Button
                 className="relative inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-1 focus:ring-inset focus:ring-primary-black"
                 onClick={() => {
-                  setIsOpen(x => !x)
+                  setIsOpen((x) => !x)
                 }}
               >
                 <span className="absolute -inset-0.5" />
@@ -129,33 +131,33 @@ export function FixedHeader() {
             as="nav"
             className="lg:hidden flex w-full bg-[#ff856a] bg-opacity-90"
           >
-            <Disclosure.Panel className="flex fixed z-30 inset-0 w-full bg-inherit px-12 pt-[120px] overflow-auto">
-              <div className="pb-3 w-full text-white">
+            <Disclosure.Panel className="flex fixed z-30 inset-0 w-full bg-inherit px-8 pt-[120px] overflow-auto">
+              <div className="pb-3 w-full text-white text-2xl">
                 <Disclosure.Button
                   as="a"
-                  href="/hackerhouse"
-                  className="uppercase block py-5 font-medium border-b border-white"
+                  href="#"
+                  className="uppercase block py-5 font-medium border-b border-white hover:opacity-80"
                 >
                   {t("nav.project")}
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="https://mirror.xyz/antalpha-labs.eth/"
-                  className="uppercase block py-5 font-medium border-b border-white"
+                  href="#"
+                  className="uppercase block py-5 font-medium border-b border-white hover:opacity-80"
                 >
                   {t("nav.wamotopia")}
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="https://www.notion.so/antalpha/230cbd296a164261a0648a383da08060?v=5373cd12ac1d4dd09e8337c4a6a5ea48"
-                  className="uppercase block py-5 font-medium border-b border-white"
+                  href="#"
+                  className="uppercase block py-5 font-medium border-b border-white hover:opacity-80"
                 >
                   {t("nav.city-guide")}
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="mailto:hello.labs@antalpha.com"
-                  className="uppercase block py-5 font-medium border-b border-white"
+                  // href={siteConfig.applyToJoinForm}
+                  className="uppercase block py-5 font-medium border-b border-white hover:opacity-80"
                 >
                   {t("nav.join")}
                 </Disclosure.Button>

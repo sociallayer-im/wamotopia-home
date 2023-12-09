@@ -29,13 +29,15 @@ const t = useTranslations(lang)
         </h2>
 
         <div class="flex flex-col md:flex-row gap-4 mt-8 px-8">
-          <button
-            class="w-60 rounded-md bg-[#FF856A] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
-            >{t("hero.learn")}</button
+          <a
+            class="inline-flex justify-center w-60 rounded-md bg-[#FF856A] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
+            >{t("hero.learn")}</a
           >
-          <button
-            class="w-60 rounded-md bg-[#375EFF] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
-            >{t("hero.join")}</button
+          <a
+            href="#"
+            target="_blank"
+            class="inline-flex justify-center w-60 rounded-md bg-[#375EFF] text-white text-base lg:text-2xl py-2 transition-opacity hover:opacity-90"
+            >{t("hero.join")}</a
           >
         </div>
       </div>
