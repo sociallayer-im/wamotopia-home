@@ -80,6 +80,14 @@ export function FixedHeader() {
                 >
                   {t("nav.join")}
                 </a>
+
+                <a
+                  href={siteConfig.applyGrantForm}
+                  target="_blank"
+                  className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors py-2 px-4"
+                >
+                  {t("nav.grant")}
+                </a>
               </div>
 
               <a

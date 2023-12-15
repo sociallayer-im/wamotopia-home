@@ -13,7 +13,8 @@ export const ui = {
     "nav.wamotopia": "Wamotopia",
     "nav.city-guide": "City Guide",
     "nav.join": "Join",
-    "hero.learn": "Apply for Builder Grant",
+    "nav.grant": "Apply for Builder Grant",
+    "hero.learn": "Create Event",
     "hero.join": "Join",
     "home.introduction": "WAMOTOPIA is a two-week cultural exchange event held in Chiang Mai.",
     "home.sub-introduction":
@@ -23,8 +24,9 @@ export const ui = {
     "nav.project": "瓦猫工程",
     "nav.wamotopia": "瓦猫托邦",
     "nav.city-guide": "城市指南",
-    "nav.join": "加入",
-    "hero.learn": "申请瓦猫活动资助",
+    "nav.grant": "申请瓦猫活动资助",
+    "nav.join": "加入瓦猫",
+    "hero.learn": "发起活动",
     "hero.join": "我想加入共创",
     "home.introduction": "WAMOTOPIA 是在清迈举办的为期两周的文化交汇活动",
     "home.sub-introduction":
