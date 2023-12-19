@@ -53,21 +53,21 @@ export function FixedHeader() {
             <div className="hidden lg:flex justify-between items-center gap-12">
               <div className="flex gap-8 items-start">
                 <a
-                  href="/"
+                  href={siteConfig.engineering}
                   className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors py-2 px-4"
                 >
                   {t("nav.project")}
                 </a>
 
                 <a
-                  href="/"
+                  href={siteConfig.engineering}
                   className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors py-2 px-4"
                 >
                   {t("nav.wamotopia")}
                 </a>
 
                 <a
-                  href="/"
+                  href={siteConfig.guide}
                   className="font-bold relative text-white hover:decoration-white decoration-transparent decoration-4 underline underline-offset-8 transition-colors py-2 px-4"
                 >
                   {t("nav.city-guide")}
@@ -143,21 +143,21 @@ export function FixedHeader() {
               <div className="pb-3 w-full text-white text-2xl">
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href={siteConfig.engineering}
                   className="uppercase block py-5 font-medium border-b border-white hover:opacity-80"
                 >
                   {t("nav.project")}
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href={siteConfig.engineering}
                   className="uppercase block py-5 font-medium border-b border-white hover:opacity-80"
                 >
                   {t("nav.wamotopia")}
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href={siteConfig.guide}
                   className="uppercase block py-5 font-medium border-b border-white hover:opacity-80"
                 >
                   {t("nav.city-guide")}

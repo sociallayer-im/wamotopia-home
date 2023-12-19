@@ -26,10 +26,10 @@ export const ui = {
     "nav.wamotopia": "瓦猫托邦",
     "nav.city-guide": "城市指南",
     "nav.grant": "申请瓦猫活动资助",
-    "nav.join": "加入瓦猫",
+    "nav.join": "加入瓦猫社群",
     "hero.housing": "住在瓦猫广场",
-    "hero.learn": "发起活动",
-    "hero.join": "我想加入共创",
+    "hero.learn": "自主发起活动",
+    "hero.join": "加入瓦猫社群",
     "home.introduction": "WAMOTOPIA 是在清迈举办的为期两周的文化交汇活动",
     "home.sub-introduction":
       "融合了 Web3 社区和数字游民，旨在一起创新、协作，并共同塑造未来",
